@@ -1,0 +1,27 @@
+/**
+ * @description 导出默认网路配置
+ **/
+const network = {
+  //配后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8
+  contentType: 'application/json;charset=UTF-8',
+  //消息框消失时间
+  messageDuration: 3000,
+  //最长请求时间
+  requestTimeout: 50000,
+  //操作正常code，支持String、Array、int多种类型
+  successCode: [200, 0], // 0为失败但不拦截
+  //登录失效code
+  invalidCode: 402,
+  //无权限code
+  noPermissionCode: 401,
+  /**
+   * @description api请求基础路径
+   */
+  baseUrl: {
+    dev: 'http://localhost:10010',
+    stage: 'http://localhost:10010',
+    pro: 'http://118.24.186.223:10010',
+    defaultPrefix: "/api/v1"
+  },
+}
+module.exports = network

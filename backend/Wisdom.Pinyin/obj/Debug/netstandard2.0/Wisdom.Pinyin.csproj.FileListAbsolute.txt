@@ -1,0 +1,17 @@
+C:\works\top\wisdom\web\webapi\RoadFlow.Pinyin\bin\Debug\netstandard2.0\Wisdom.Pinyin.deps.json
+C:\works\top\wisdom\web\webapi\RoadFlow.Pinyin\bin\Debug\netstandard2.0\Wisdom.Pinyin.dll
+C:\works\top\wisdom\web\webapi\RoadFlow.Pinyin\bin\Debug\netstandard2.0\Wisdom.Pinyin.pdb
+C:\works\top\wisdom\web\webapi\RoadFlow.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.AssemblyInfoInputs.cache
+C:\works\top\wisdom\web\webapi\RoadFlow.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.AssemblyInfo.cs
+C:\works\top\wisdom\web\webapi\RoadFlow.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.csproj.CoreCompileInputs.cache
+C:\works\top\wisdom\web\webapi\RoadFlow.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.dll
+C:\works\top\wisdom\web\webapi\RoadFlow.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.pdb
+C:\works\top\wisdom\web\webapi\Wisdom.Pinyin\bin\Debug\netstandard2.0\Wisdom.Pinyin.deps.json
+C:\works\top\wisdom\web\webapi\Wisdom.Pinyin\bin\Debug\netstandard2.0\Wisdom.Pinyin.dll
+C:\works\top\wisdom\web\webapi\Wisdom.Pinyin\bin\Debug\netstandard2.0\Wisdom.Pinyin.pdb
+C:\works\top\wisdom\web\webapi\Wisdom.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.csprojAssemblyReference.cache
+C:\works\top\wisdom\web\webapi\Wisdom.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.AssemblyInfoInputs.cache
+C:\works\top\wisdom\web\webapi\Wisdom.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.AssemblyInfo.cs
+C:\works\top\wisdom\web\webapi\Wisdom.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.csproj.CoreCompileInputs.cache
+C:\works\top\wisdom\web\webapi\Wisdom.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.dll
+C:\works\top\wisdom\web\webapi\Wisdom.Pinyin\obj\Debug\netstandard2.0\Wisdom.Pinyin.pdb

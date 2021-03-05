@@ -1,0 +1,9 @@
+C:\works\roadflow\RoadFlowCore2.8.8\RoadFlow.Pinyin\bin\Release\netstandard2.0\RoadFlow.Pinyin.deps.json
+C:\works\roadflow\RoadFlowCore2.8.8\RoadFlow.Pinyin\bin\Release\netstandard2.0\RoadFlow.Pinyin.dll
+C:\works\roadflow\RoadFlowCore2.8.8\RoadFlow.Pinyin\bin\Release\netstandard2.0\RoadFlow.Pinyin.pdb
+C:\works\roadflow\RoadFlowCore2.8.8\RoadFlow.Pinyin\obj\Release\netstandard2.0\RoadFlow.Pinyin.csprojAssemblyReference.cache
+C:\works\roadflow\RoadFlowCore2.8.8\RoadFlow.Pinyin\obj\Release\netstandard2.0\RoadFlow.Pinyin.AssemblyInfoInputs.cache
+C:\works\roadflow\RoadFlowCore2.8.8\RoadFlow.Pinyin\obj\Release\netstandard2.0\RoadFlow.Pinyin.AssemblyInfo.cs
+C:\works\roadflow\RoadFlowCore2.8.8\RoadFlow.Pinyin\obj\Release\netstandard2.0\RoadFlow.Pinyin.csproj.CoreCompileInputs.cache
+C:\works\roadflow\RoadFlowCore2.8.8\RoadFlow.Pinyin\obj\Release\netstandard2.0\RoadFlow.Pinyin.dll
+C:\works\roadflow\RoadFlowCore2.8.8\RoadFlow.Pinyin\obj\Release\netstandard2.0\RoadFlow.Pinyin.pdb

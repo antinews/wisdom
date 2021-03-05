@@ -1,0 +1,4571 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wisdom.Webapi</name>
+    </assembly>
+    <members>
+        <member name="P:Wisdom.Webapi.Auth.AppAuthenticationSettings.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AppAuthenticationSettings.Secret">
+            <summary>
+            应用密钥(真实项目中可能区分应用,不同的应用对应惟一的密钥)
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Auth.AuthContext.AuthContextService.Configure(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            以依赖注入的方式，配置http上下文
+            </summary>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AuthContext.AuthContextService.Current">
+            <summary>
+            http上下文
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AuthContext.AuthContextService.CurrentUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AuthContext.AuthContextService.IsAuthenticated">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AuthContext.AuthContextService.IsSupperAdministator">
+            <summary>
+            是否是超级管理员
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AuthContext.AuthContextUser.Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AuthContext.AuthContextUser.TrueName">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AuthContext.AuthContextUser.UserName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AuthContext.AuthContextUser.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Auth.AuthContext.AuthContextUser.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Auth.JwtBearerAuthenticationExtension.AddJwtBearerAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Wisdom.Webapi.Auth.AppAuthenticationSettings)">
+            <summary>
+            注册JWT Bearer认证服务的静态扩展方法
+            </summary>
+            <param name="services"></param>
+            <param name="appSettings">JWT授权的配置项</param>
+        </member>
+        <member name="M:Wisdom.Webapi.Configurations.DbContext.GetDbContextInstance">
+            <summary>
+            主数据库（线程通用）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.AccountController.Profile(System.String)">
+            <summary>
+            用户相关信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.AccountController.Menu">
+            <summary>
+            为路由提供的菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.AccountController.BuildTree(System.Collections.Generic.List{Sugar.Enties.sys_menus},System.Int32)">
+            <summary>
+            构建树
+            </summary>
+            <param name="menus"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Maintenance.AttendanceController.AttendanceList(System.String)">
+            <summary>
+            用户出勤轨迹
+            </summary>
+            <param name="param">admin@2017-10-13</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Maintenance.AttendanceController.Trace(System.Int32)">
+            <summary>
+            轨迹数据
+            </summary>
+            <param name="id">MissionId</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wisdom.Webapi.Controllers.Api.V1.Systems.DiccategorysController">
+            <summary>
+            字典类型
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DiccategorysController.GetDiccategorys">
+            <summary>
+            获取字典类型列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DiccategorysController.GetDiccategorysByID(System.Int32)">
+            <summary>
+            查看字典类型名
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DiccategorysController.DelDiccategorysByID(System.Int32)">
+            <summary>
+            删除单个字典类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DiccategorysController.AddDiccategory(Wisdom.Webapi.Models.Request.Systems.Diccategorys)">
+            <summary>
+            添加字典类型
+            </summary>
+            <param name="diccategorys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DiccategorysController.SetDiccategoryById(Wisdom.Webapi.Models.Request.Systems.Diccategorys)">
+            <summary>
+            修改字典类型
+            </summary>
+            <param name="diccategorys"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wisdom.Webapi.Controllers.Api.V1.Systems.DicsController">
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DicsController.GetDicsListByID(System.Int32)">
+            <summary>
+            获取字典类型获取字典
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DicsController.AddDics(Wisdom.Webapi.Models.Request.Systems.Dics)">
+            <summary>
+            添加字典
+            </summary>
+            <param name="dics"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DicsController.DelDics(System.Int32)">
+            <summary>
+            单个字典删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DicsController.SetDicsById(Wisdom.Webapi.Models.Request.Systems.Dics)">
+            <summary>
+            修改字典信息
+            </summary>
+            <param name="dics"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.DicsController.DelDicsList(Wisdom.Webapi.Models.Request.Systems.Dics)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="dics"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.MenuController.Tree(System.Nullable{System.Int32})">
+            <summary>
+            菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.MenuController.LoadMenuTree(System.Nullable{System.Int32})">
+            <summary>
+            加载菜单树
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.MenuController.BuildTree(System.Collections.Generic.List{Sugar.Enties.sys_menus},System.Nullable{System.Int32})">
+            <summary>
+            为列表构建树
+            </summary>
+            <param name="menus"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.MenuTreeHelper.BuildTree(System.Collections.Generic.List{Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree},System.Nullable{System.Int32})">
+            <summary>
+            构建Element-Tree
+            </summary>
+            <param name="menus"></param>
+            <param name="selectedId">选择的id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Api.V1.Systems.RoleController.AssignPerimission(Wisdom.Webapi.Models.Request.Systems.RoleAssignPermissionPayload)">
+            <summary>
+            为角色分配权限
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wisdom.Webapi.Controllers.Systematic.DepartmentController">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Systematic.DepartmentController.GetDepartement">
+            <summary>
+            查看所有部门列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Systematic.DepartmentController.Gets">
+            <summary>
+            测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Systematic.DepartmentController.GetDepartementList(System.Int32)">
+            <summary>
+            查找父级
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Systematic.DepartmentController.AddDepartement(Wisdom.Webapi.Models.System.Departement.Departement)">
+            <summary>
+            添加部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Systematic.DepartmentController.SetDepartementById(Wisdom.Webapi.Models.System.Departement.Departement)">
+            <summary>
+            修改部门信息
+            </summary>
+            <param name="departement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Systematic.DepartmentController.GetDepartementByName(System.String)">
+            <summary>
+            模糊查询名字
+            </summary>
+            <param name="Name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Systematic.DepartmentController.DelDepartement(Wisdom.Webapi.Models.System.Departement.Departement)">
+            <summary>
+            删除单个
+            </summary>
+            <param name="departement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.Systematic.DepartmentController.DelDepartementList(Wisdom.Webapi.Models.System.Departement.Departement)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="departement"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Wisdom.Webapi.Controllers.Systematic.Trees.DepartmentName">
+            <summary>
+            Desc:部门名称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Wisdom.Webapi.Controllers.Systematic.Trees.ParentId">
+            <summary>
+            Desc:父ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Wisdom.Webapi.Controllers.Systematic.Trees.Sortnum">
+            <summary>
+            Desc:排序
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Wisdom.Webapi.Controllers.Systematic.Trees.Remark">
+            <summary>
+            Desc:部门描述
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.AuthController.GetToken(System.String,System.String)">
+            <summary>
+            获取TOKEN
+            </summary>
+            <param name="username">账号</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wisdom.Webapi.Controllers.BaseController">
+            <summary>
+            基础控制器
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Controllers.ErrorController.Code(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wisdom.Webapi.Entities.Enum.CommonEnum">
+            <summary>
+            通用枚举类
+            </summary>
+        </member>
+        <member name="T:Wisdom.Webapi.Entities.Enum.CommonEnum.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="F:Wisdom.Webapi.Entities.Enum.CommonEnum.UserType.SuperAdministrator">
+            <summary>
+            超级管理员
+            </summary>
+        </member>
+        <member name="F:Wisdom.Webapi.Entities.Enum.CommonEnum.UserType.Admin">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="T:Wisdom.Webapi.Entities.Enum.CommonEnum.PermissionType">
+            <summary>
+            权限类型
+            </summary>
+        </member>
+        <member name="F:Wisdom.Webapi.Entities.Enum.CommonEnum.PermissionType.Menu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:Wisdom.Webapi.Entities.Enum.CommonEnum.PermissionType.Action">
+            <summary>
+            按钮/操作/功能
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithAssignProperty.Id">
+            <summary>
+            权限Id
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithAssignProperty.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithAssignProperty.MenuId">
+            <summary>
+            权限关联的菜单Id
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithAssignProperty.ActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithAssignProperty.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithAssignProperty.IsAssigned">
+            <summary>
+            权限是否已分配到当前角色
+            </summary>
+        </member>
+        <member name="T:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithMenu">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithMenu.PermissionId">
+            <summary>
+            权限码
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithMenu.PermissionActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithMenu.PermissionName">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithMenu.PermissionType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithMenu.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithMenu.MenuId">
+            <summary>
+            菜单GUID
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Entities.QueryModels.Permission.PermissionWithMenu.MenuAlias">
+            <summary>
+            菜单别名(与前端路由配置中的name值保持一致)
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Extensions.CustomException.ExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            处理每个http请求
+            </summary>
+            <param name="next">请求</param>
+        </member>
+        <member name="M:Wisdom.Webapi.Extensions.CustomException.GlobalExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            发生异常时进入
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Extensions.CustomException.GlobalExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            异步发生异常时进入
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdom.Webapi.Extensions.CustomException.GlobalExceptionFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action 执行后拦截
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Extensions.CustomException.GlobalExceptionFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action 执行前拦截[模型验证应该在此处先处理]
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Extensions.CustomException.HttpException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Wisdom.Webapi.Extensions.CustomException.HttpException.StatusCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Wisdom.Webapi.Extensions.CustomException.Models.UnauthorizeException">
+            <summary>
+            未授权异常
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Extensions.ResponseModelFactory.CreateInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Extensions.ResponseModelFactory.CreateResultInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Wisdom.Webapi.Models.JsonResponse">
+            <summary>
+            构建标准的返回信息
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.JsonResponse.status">
+            <summary>
+            status:200-成功,300-失败,400-参数非法等等
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.JsonResponse.info">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.JsonResponse.data">
+            <summary>
+            返回的具体数据信息
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.JsonResponse.log">
+            <summary>
+            返回操作错误提示或日志
+            </summary>
+        </member>
+        <member name="T:Wisdom.Webapi.Models.Request.RequestPayload">
+            <summary>
+            请求实体(基类)
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.RequestPayload.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.RequestPayload.PageNo">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Diccategorys.ID">
+            <summary>
+            字典类型主键
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Diccategorys.Title">
+            <summary>
+            字典类型名
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Diccategorys.Code">
+            <summary>
+            类型编码
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Diccategorys.SortNum">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Diccategorys.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Diccategorys.UserID">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Dics.Id">
+            <summary>
+            字典ID
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Dics.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Dics.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Dics.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Dics.SortNum">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Dics.CategoryId">
+            <summary>
+            字典类型
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Dics.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Dics.Reamrk">
+            <summary>
+            字典描述
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.Dics.IDs">
+            <summary>
+            批量ID
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.RoleAssignPermissionPayload.Id">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Request.Systems.RoleAssignPermissionPayload.Permissions">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.System.Departement.Departement.createdUserId">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.System.Departement.Departement.departmentName">
+            <summary>
+            部门名
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.System.Departement.Departement.parentId">
+            <summary>
+            上级ID
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.System.Departement.Departement.sortnum">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Models.Response.ResponseModel.#ctor">
+            <summary>
+            请求响应实体类
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Response.ResponseModel.Code">
+            <summary>
+            响应代码
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Response.ResponseModel.Message">
+            <summary>
+            响应消息内容
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Response.ResponseModel.Data">
+            <summary>
+            返回的响应数据
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Models.Response.ResponseModel.SetSuccess(System.String)">
+            <summary>
+            设置响应状态为成功
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Models.Response.ResponseModel.SetFailed(System.String)">
+            <summary>
+            设置响应状态为失败
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Models.Response.ResponseModel.SetIsTrial(System.String)">
+            <summary>
+            设置响应状态为体验版(返回失败结果)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Models.Response.ResponseModel.SetError(System.String)">
+            <summary>
+            设置响应状态为错误
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Models.Response.ResponseModel.SetNotFound(System.String)">
+            <summary>
+            设置响应状态为未知资源
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Models.Response.ResponseModel.SetNoPermission(System.String)">
+            <summary>
+            设置响应状态为无权限
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Models.Response.ResponseModel.SetData(System.Object)">
+            <summary>
+            设置响应数据
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:Wisdom.Webapi.Models.Response.ResponseResultModel.TotalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Wisdom.Webapi.Models.Response.ResponseResultModel.SetData(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="totalCount"></param>
+        </member>
+        <member name="M:Wisdom.Webapi.Utils.FileHelper.ListToByteArray``1(System.Collections.Generic.List{``0})">
+            <summary>
+            泛型集合转字节数组
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuNode.NavTitle">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuNode.LinkUrl">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuNode.IconUrl">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuNode.IsVisible">
+            <summary>
+            Desc:是否显示
+            Default:1
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuNode.ParentId">
+            <summary>
+            Desc:父节点ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuNode.Name">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuNode.BigImageUrl">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree">
+            <summary>
+            用于Element-Tree
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree.ParentId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree.Label">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Mneu.MenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="T:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree">
+            <summary>
+            用于角色权限的菜单树
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree.Title">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree.AllAssigned">
+            <summary>
+            当前菜单的所有权限都已分配到指定角色
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree.Permissions">
+            <summary>
+            当前菜单拥有的权限功能
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionMenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionElement.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:Wisdom.Webapi.ViewModels.Systems.Permission.PermissionElement.IsAssignedToRole">
+            <summary>
+            是否已分配到指定角色
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CodecsController.List(Edge.WebApi.Controllers.Monitor.CodecsController.CodecsPageRequest)">
+            <summary>	
+            获取协议列表
+            </summary>	
+            <param name="payload">请求参数</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CodecsController.Create(Edge.WebApi.Entity.Monitor.Monitor_Codecs)">
+            <summary>	
+            新增协议
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CodecsController.Edit(System.Int32)">
+            <summary>	
+            获取单个协议详情
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CodecsController.Edit(Edge.WebApi.Entity.Monitor.Monitor_Codecs)">
+            <summary>	
+            修改协议，务必先获取单个信息
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CodecsController.Delete(System.String)">
+            <summary>	
+            删除协议
+            </summary>	
+            <param name="ids">角色ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.CommandController.CommandPageRequest.CodecsId">
+            <summary>
+            协议Id，不过滤请传入0
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.CommandController.CommandPageRequest.Kw">
+            <summary>
+            搜索关键字moduleId模糊搜索
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CommandController.List(Edge.WebApi.Controllers.Monitor.CommandController.CommandPageRequest)">
+            <summary>	
+            获取指令列表
+            </summary>	
+            <param name="payload">请求参数</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CommandController.Create(Edge.WebApi.Entity.Monitor.Monitor_Command)">
+            <summary>	
+            新增指令
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CommandController.Edit(System.Int32)">
+            <summary>	
+            获取单个指令详情
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CommandController.Edit(Edge.WebApi.Entity.Monitor.Monitor_Command)">
+            <summary>	
+            修改指令，务必先获取单个信息
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.CommandController.Delete(System.String)">
+            <summary>	
+            删除指令
+            </summary>	
+            <param name="ids">角色ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="F:Edge.WebApi.Controllers.Monitor.DevicesController.DevicesPageRequest.IsActived">
+            <summary>	
+            状态 1启用0禁用-1默认/全部	
+            </summary>	
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.DevicesController.DevicesPageRequest.ProjectId">
+            <summary>
+            结构物Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.DevicesController.DevicesPageRequest.kwType">
+            <summary>
+            kw类型，1测站/默认  2测站地址3测站端口4目标地址5目标端口
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.List(Edge.WebApi.Controllers.Monitor.DevicesController.DevicesPageRequest)">
+            <summary>	
+            获取测站列表
+            </summary>	
+            <param name="payload">请求参数</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.Get(System.String,System.Int32)">
+            <summary>
+            服务于后台设备信息调取
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.Create(Edge.WebApi.Entity.Monitor.Monitor_Devices)">
+            <summary>	
+            新增（测站）
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.CreateMethod(Edge.WebApi.Entity.Monitor.Monitor_Devices,System.Boolean)">
+            <summary>
+             创建的主体
+            </summary>
+            <param name="model"></param>
+            <param name="isCreatePoint"></param>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.Edit(System.Int32)">
+            <summary>	
+            单个数据（测站）
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.GetStreams(System.Int32)">
+            <summary>	
+            获取该测站下含有4种存储任务，哪怕没有，我也会创建一个不启用
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="T:Edge.WebApi.Controllers.Monitor.DevicesController.tempstreams">
+            <summary>
+            4个streams临时类
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.EditStreams(Edge.WebApi.Controllers.Monitor.DevicesController.tempstreams)">
+             <summary>	
+            编辑修改streams
+             </summary>	
+             <param name="streams"></param>	
+             <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.Edit(Edge.WebApi.Entity.Monitor.Monitor_Devices)">
+             <summary>	
+            编辑修改（测站） 切记：先获取，再修改，不管你改没改其他信息，都需要传回来
+             </summary>	
+             <param name="model"></param>	
+             <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.Delete(System.String)">
+            <summary>	
+            删除测站/设备
+            </summary>	
+            <param name="ids">角色ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.Batch(System.String,System.String)">
+            <summary>	
+            批量操作（测站）
+            </summary>	
+            <param name="command">enable启用，disable禁用</param>	
+            <param name="ids">ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.start(Edge.WebApi.Entity.Monitor.Monitor_Devices)">
+            <summary>
+            启动
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DevicesController.UploadImg(Microsoft.AspNetCore.Http.IFormFileCollection)">
+            <summary>
+            文件上传/图片（测站）
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Edge.WebApi.Controllers.Monitor.DeviceStatusController">
+            <summary>
+            设备自诊断控制器
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Controllers.Monitor.DeviceStatusController.DeviceStatusPageRequest">
+            <summary>
+            list参数类
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.DeviceStatusController.DeviceStatusPageRequest.sTime">
+            <summary>
+            开始时间--上面的今天-7天-15天，也记得这样传：传入两个时间间断（标准时间格式，到秒）
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.DeviceStatusController.DeviceStatusPageRequest.eTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DeviceStatusController.List(Edge.WebApi.Controllers.Monitor.DeviceStatusController.DeviceStatusPageRequest)">
+            <summary>	
+            获取指令列表
+            </summary>	
+            <param name="payload">请求参数</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DeviceStatusController.Create(Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus)">
+            <summary>	
+            新增
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DeviceStatusController.Edit(System.Int32)">
+            <summary>	
+            获取单个详情
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DeviceStatusController.ByDeviceIdGet(System.Int32)">
+            <summary>	
+            根据设备ID获取单个详情
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DeviceStatusController.Edit(Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus)">
+            <summary>	
+            修改，务必先获取单个信息
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.DeviceStatusController.Delete(System.String)">
+            <summary>	
+            删除
+            </summary>	
+            <param name="ids">ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.KindinfoController.KindinfoPageRequest.ProjectId">
+            <summary>
+            结构物Id
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.KindinfoController.List(Edge.WebApi.Controllers.Monitor.KindinfoController.KindinfoPageRequest)">
+            <summary>	
+            获取传感器类型列表
+            </summary>	
+            <param name="payload">请求参数</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.KindinfoController.KindByIsActivePoint(System.Int32)">
+            <summary>
+            获取传感器下含有测点的传感器数组
+            </summary>
+            <param name="pid">结构物Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.KindinfoController.Create(Edge.WebApi.Entity.Monitor.Monitor_Kindinfo)">
+            <summary>	
+            新增传感器类型
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.KindinfoController.Edit(System.Int32)">
+            <summary>	
+            获取单个传感器类型详情
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.KindinfoController.Edit(Edge.WebApi.Entity.Monitor.Monitor_Kindinfo)">
+            <summary>	
+            修改传感器类型，务必先获取单个信息
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.KindinfoController.Batch(System.String,System.String)">
+            <summary>	
+            批量操作（测点）	
+            </summary>	
+            <param name="command"></param>	
+            <param name="ids">ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.KindinfoController.Delete(System.String)">
+            <summary>	
+            删除传感器类型
+            </summary>	
+            <param name="ids">角色ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.MonitoringDataController.GetLineData(System.Int32,System.Int32,System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            历史数据（point：测点Id  type：数据种类：min-1、min10-2、hour-3、day-4、原始-default/0  lx：数据类型：最小1 最大2 方差3 平均0 开始/结束时间，没有请传入""）
+            </summary>
+            <param name="point">测点Id</param>
+            <param name="type">数据种类：min-1、min10-2、hour-3、day-4、原始-default/0</param>
+            <param name="lx">数据类型：最小1 最大2 方差3 平均0</param>
+            <param name="stime">开始时间，没有请传入null</param>
+            <param name="etime">结束时间，没有请传入null</param>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.MonitoringDataController.TempLineData.time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.MonitoringDataController.TempLineData.value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.MonitoringDataController.LineData.time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.MonitoringDataController.LineData.value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="F:Edge.WebApi.Controllers.Monitor.PointsController.PointPageRequest.IsActived">
+            <summary>	
+            状态 1启用0禁用-1默认/全部	
+            </summary>	
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.PointsController.PointPageRequest.ProjectId">
+            <summary>
+            结构物Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.PointsController.PointPageRequest.DeviceId">
+            <summary>
+            测站Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.PointsController.PointPageRequest.MonitoringKindId">
+            <summary>
+            传感器ID
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.List(Edge.WebApi.Controllers.Monitor.PointsController.PointPageRequest)">
+            <summary>
+            获取列表（测点）
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.BackPointExcel(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            导出筛选的测点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.GetModelValue(System.String,System.Object)">
+            <summary>
+            获取类中的属性值
+            </summary>
+            <param name="FieldName"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.SetModelValue(System.String,System.Object,System.Object)">
+            <summary>
+            设置类中的属性值
+            </summary>
+            <param name="FieldName"></param>
+            <param name="obj"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.PointsByKind(System.Int32)">
+            <summary>
+            获取传感器下激活测点数组
+            </summary>
+            <param name="kid">传感器Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.GetPointOne(System.String)">
+            <summary>
+            根据ids获取多个测点数组（测点）
+            </summary>
+            <param name="id">id多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.Create(Edge.WebApi.Entity.Monitor.Monitor_Points)">
+            <summary>	
+            新增测点
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.Edit(System.Int32)">
+            <summary>	
+            获取单个测点详情
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.Edit(Edge.WebApi.Entity.Monitor.Monitor_Points)">
+            <summary>	
+            编辑（测点） 切记：先获取，再修改，不管你改没改其他信息，都需要传回来
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.Delete(System.String)">
+            <summary>	
+            删除（测点）	
+            </summary>	
+            <param name="ids">角色ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.Batch(System.String,System.String)">
+            <summary>	
+            批量操作（测点）	
+            </summary>	
+            <param name="command"></param>	
+            <param name="ids">ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.UploadImg(Microsoft.AspNetCore.Http.IFormFileCollection)">
+            <summary>
+            上传（测点）
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.UploadPointsFile(Microsoft.AspNetCore.Http.IFormFileCollection)">
+            <summary>
+            上传（测点）文件，先下模板
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.PointsController.GetValueType(NPOI.SS.UserModel.ICell)">
+            <summary>
+            获取单元格类型
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Edge.WebApi.Controllers.Monitor.ProjectsController">
+            <summary>
+            结构物API
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Controllers.Monitor.ProjectsController.ProjectsPageRequest">
+            <summary>
+            列表获取参数(结构物)
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.List(Edge.WebApi.Controllers.Monitor.ProjectsController.ProjectsPageRequest)">
+            <summary>	
+            列表分页获取
+            </summary>	
+            <param name="payload">请求参数</param>	
+            <returns></returns>	
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.ProjectsController.AlarmNumber.pointId">
+            <summary>
+            测点
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.ProjectsController.AlarmNumber.number">
+            <summary>
+            测点报警数
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.ProjectTypes(System.Int32)">
+            <summary>	
+            获取结构物下的报警记录数
+            </summary>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.Create(Edge.WebApi.Entity.Monitor.Monitor_Projects)">
+            <summary>	
+            新增(结构物)
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.Edit(System.Int32)">
+            <summary>	
+            获取单个结构物信息
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.ProjectTypes">
+            <summary>	
+            获取结构物类型数组
+            </summary>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.KindByProject(System.Int32)">
+            <summary>	
+            获取单个结构物各个传感器类型数量
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.Edit(Edge.WebApi.Entity.Monitor.Monitor_Projects)">
+            <summary>	
+            修改单个结构物信息  切记：先获取，再修改，不管你改没改其他信息，都需要传回来
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.Delete(System.String)">
+            <summary>	
+            删除结构物	
+            </summary>	
+            <param name="ids">ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.Batch(System.String,System.String)">
+            <summary>	
+            批量操作（结构物）
+            </summary>	
+            <param name="command">enable启用，disable禁用</param>	
+            <param name="ids">ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.ProjectsController.UploadImg(Microsoft.AspNetCore.Http.IFormFileCollection)">
+            <summary>
+            文件上传/图片（结构物）
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.SchedulerTasksController.SchedulertasksPageRequest.Kw">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Controllers.Monitor.SchedulerTasksController.SchedulertasksPageRequest.TaskDesc">
+            <summary>
+            任务说明：全选的就传入空字符串就行。非系统的，传入“系统生成”
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.SchedulerTasksController.List(Edge.WebApi.Controllers.Monitor.SchedulerTasksController.SchedulertasksPageRequest)">
+            <summary>	
+            获取任务调度列表
+            </summary>	
+            <param name="payload">请求参数</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.SchedulerTasksController.Create(Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks)">
+            <summary>	
+            新增任务调度
+            </summary>	
+            <param name="model"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.SchedulerTasksController.Edit(System.Int32)">
+            <summary>	
+            获取单个任务调度	
+            </summary>	
+            <param name="id">惟一编码</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.SchedulerTasksController.Edit(Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks)">
+             <summary>	
+            编辑修改任务调度，务必先获取
+             </summary>	
+             <param name="model"></param>	
+             <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.SchedulerTasksController.Batch(System.String,System.String)">
+            <summary>	
+            批量操作（测点）	
+            </summary>	
+            <param name="command"></param>	
+            <param name="ids">ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.SchedulerTasksController.Delete(System.String)">
+            <summary>	
+            删除任务调度
+            </summary>	
+            <param name="ids">角色ID,多个以逗号分隔</param>	
+            <returns></returns>	
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor.SchedulerTasksController.UploadFile(Microsoft.AspNetCore.Http.IFormFileCollection)">
+            <summary>
+            文件上传（任务）
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Edge.WebApi.Controllers.Monitor_BaseController">
+            <summary>
+            基类勿动
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor_BaseController.Updateable(System.Object)">
+            <summary>
+            主键实体更新
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor_BaseController.Updateable``1(System.Linq.Expressions.Expression{System.Func{``0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="updateDynamicObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor_BaseController.Insertable(System.Object)">
+            <summary>
+            不返回自增插入的ID,可插入数组
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor_BaseController.InsertableReturnIdentity``1(``0)">
+            <summary>
+            可返回自增插入的ID,,可插入数组
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Edge.WebApi.Controllers.Monitor_BaseController.Deleteable``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            删除
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceSubsetInfo.ParentId">
+            <summary>
+            父设备ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceSubsetInfo.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceSubsetInfo.ModuleId">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceSubsetInfo.ActivedCodecsCommand">
+            <summary>
+            是否启用 编码器处理发送的采集指令 true 启用 false 不启用
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceSubsetInfo.CollectCommand">
+            <summary>
+            采集指令
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceSubsetInfo.Codecs">
+            <summary>
+            子设备的解算方式
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceSubsetInfo.Points">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceSubsetInfo.CollectSleep">
+            <summary>
+            子设备之间连续采集需要间隔的时间，单位毫秒，默认500毫秒
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceSubsetInfo.PointNums">
+            <summary>
+            子设备最大接入的测点数量
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.Monitor_Codecs">
+            <summary>
+            协议类
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Codecs.CodecsId">
+            <summary>
+            协议解析ID，非自增，手动填写证整型
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Codecs.CodecsName">
+            <summary>
+            协议解析名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Codecs.ClassName">
+            <summary>
+            原生代码解析时，使用的类名 CommandFangKongZhenXian
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Codecs.CodescDesc">
+            <summary>
+            协议说明
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Codecs.CodecsMethod">
+            <summary>
+            协议解析方式：Native 内置插件解析 Hybird 混合脚本解析
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Codecs.CodecsPluginPath">
+            <summary>
+            解析插件所在路径
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Codecs.CodecsLanguage">
+            <summary>
+            动态解析选择的语言 javascript / python
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Codecs.DefaultNumber">
+            <summary>
+            默认测点个数
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.Monitor_Command">
+            <summary>
+            模块指令类
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Command.Id">
+            <summary>
+            指令主键
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Command.CodecsId">
+            <summary>
+            所属协议
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Command.ModuleId">
+            <summary>
+            模块号，请统一使用十六进制Hex
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Command.Command">
+            <summary>
+            模块对应指令
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Computeformulainfo.FormulaName">
+            <summary>
+            公式名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Computeformulainfo.FormulaDesc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Computeformulainfo.FormulaKeys">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Computeformulainfo.FormulaValues">
+            <summary>
+            参数值
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm">
+            <summary>
+            报警记录
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.Id">
+            <summary>
+            自增长主键
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.ProjectId">
+            <summary>
+            结构物Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.DeviceId">
+            <summary>
+            测站Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.PointId">
+            <summary>
+            测点Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.Grade">
+            <summary>
+            报警级别
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.StartTime">
+            <summary>
+            报警开始时间
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.EndTime">
+            <summary>
+            报警结束时间
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.AlarmValue">
+            <summary>
+            报警值
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.AlarmRange">
+            <summary>
+            超阈值情况
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DataAlarm.State">
+            <summary>
+            报警状态
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.YunId">
+            <summary>
+            拉取的云平台Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.YunTableName">
+            <summary>
+            YunTableName
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.DeviceDesc">
+            <summary>
+            设备说明
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.ProjectId">
+            <summary>
+            所属项目ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.ProjectName">
+            <summary>
+            所属项目名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.NetProtocol">
+            <summary>
+            网络接入协议 TCP UDP MQTT DTU（请前端直接在下拉框填入这些值，key-value等同）
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.NetPluginPath">
+            <summary>
+            网络协议插件所在路径
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.DeviceAddr">
+            <summary>
+            设备自身地址：设备有固定IP地址时才有效
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.DevicePort">
+            <summary>
+            设备自身端口：设备有固定IP地址时才有效
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.ReportAddr">
+            <summary>
+            设备上报地址
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.ReportPort">
+            <summary>
+            设备上报端口
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.EdgeMiddleAddr">
+            <summary>
+            边缘端中间件地址
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.EdgeMiddlePort">
+            <summary>
+            边缘端中间件端口
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.PointNums">
+            <summary>
+            设备最多接入监测点个数
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.UploadMethod">
+            <summary>
+            上报方式：autoupload 自动上报 polling 定期轮询
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.ActivedCodecsCommand">
+            <summary>
+            是否启用 编码器处理发送的采集指令 true 启用 false 不启用
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.ModuleId">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.CollectCommand">
+            <summary>
+            采集指令 自动上报时字段为空，如果设备有子设备，以子设备集合的采集指令为准
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.HasDeviceSubset">
+            <summary>
+            是否包含子设备集合 比如DTU设备，一个端口对应多个采集模块，每个模块有个采集指令（子设备）
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.Codecs">
+            <summary>
+            协议解析
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.DeviceSubsets">
+            <summary>
+            子设备集合
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.CollectInterval">
+            <summary>
+            采样间隔，单位：毫秒
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.LastCollectTime">
+            <summary>
+            最后采样时间
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.Pic">
+            <summary>
+            测站照片/Uploads/Device/xxx.png
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.IsActived">
+            <summary>
+            是否启用 1启用 0 不启用
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.DeviceStatus">
+            <summary>
+            设备状态 1上线 0 下线
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.DeviceExtend">
+            <summary>
+            设备扩展信息
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.DeviceAppSystem">
+            <summary>
+            设备应用配置信息
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.StreamComputingTasks">
+            <summary>
+            流式计算任务集
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.TaskSchedulerSettings">
+            <summary>
+            定时任务集
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices.Points">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.DeviceExtendInfo">
+            <summary>
+            设备扩展信息
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceExtendInfo.Group">
+            <summary>
+            设备分组
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.DeviceExtendInfo.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus">
+            <summary>
+            设备自诊断
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus.Id">
+            <summary>
+            自增长ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus.DeviceId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus.NetworkStatus">
+            <summary>
+            网络状态：0异常/1正常
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus.Ping">
+            <summary>
+            网络PING值
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus.TheoreticalRecord">
+            <summary>
+            理论记录数量
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus.RecordCount">
+            <summary>
+            实际记录数量
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus.LastCollectTime">
+            <summary>
+            最后一次采集时间
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatus.ModiifyDate">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatusView">
+            <summary>
+            设备自诊断扩展类
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatusView.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_DeviceStatusView.DeviceAddr">
+            <summary>
+            设备地址
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices_Appsystem.EdgeDatabaseType">
+            <summary>
+            边缘端使用的数据库类型 Mysql Taosdata Sqlite
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices_Appsystem.RestDataSource">
+            <summary>
+            使用REST连接器时，数据库地址
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices_Appsystem.DataSource">
+            <summary>
+            数据库链接
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices_Appsystem.Database">
+             <summary>
+            数据库
+             </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices_Appsystem.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Devices_Appsystem.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Groups.Id">
+            <summary>
+            分组ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Groups.GroupName">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Groups.GroupDesc">
+            <summary>
+            分组时间
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.ProjectId">
+            <summary>
+            结构物Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.KindCode">
+            <summary>
+            传感器类型代码
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.Precision">
+            <summary>
+            采集值精度
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.TempId">
+            <summary>
+            父tempId
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.IsActived">
+            <summary>
+            是否启用，0禁用，1启用
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.NormalIcon">
+            <summary>
+            正常图标
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.LoseIcon">
+            <summary>
+            不可以图标
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.EarlyWarningIcon">
+            <summary>
+            一级警报图标
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Kindinfo.AlarmIcon">
+            <summary>
+            二级警报图标
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_KindinfoTemp.ProjectType">
+            <summary>
+            结构物类型Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_KindinfoTemp.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_KindinfoTemp.KindCode">
+            <summary>
+            传感器类型代码
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_KindinfoTemp.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_KindinfoTemp.Precision">
+            <summary>
+            采集值精度
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_KindinfoTemp.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_KindinfoTemp.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.Monitor_Points">
+            <summary>
+            测点
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.YunId">
+            <summary>
+            云Id
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.DeviceId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.DeviceName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.ProjectId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.ProjectName">
+            <summary>
+            所属项目名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.PointCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.PointName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.PointDesc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.InitChanel">
+            <summary>
+            初始通道：不可变更
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.Chanel">
+            <summary>
+            通道号，可以变更，以应对单通道故障的问题
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.IsActived">
+            <summary>
+            是否启用，0禁用，1启用
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.ComputeFormulaId">
+            <summary>
+            公式ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.Pic">
+            <summary>
+            测点照片/Uploads/Points/xxx.png
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.Range1Min">
+            <summary>
+            一级阈值下限
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.Range1Max">
+            <summary>
+            一级阈值上限
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.Range2Min">
+            <summary>
+            二级阈值下限
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.Range2Max">
+            <summary>
+            二级阈值上限
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.MaxValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.MinValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.IsReasonableValidate">
+            <summary>
+            合理值启用
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.IsThresholdAlarm">
+            <summary>
+            是否阈值报警
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.IsBasePoint">
+            <summary>
+            是否基准点
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.ComputeFormula">
+            <summary>
+            计算公式
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.MonitoringKind">
+            <summary>
+            测点监测类型
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Points.PointExtend">
+            <summary>
+            测点扩展属性
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_PointsView.CollectInterval">
+            <summary>
+            采样间隔，单位：毫秒
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.PointExtendInfo">
+            <summary>
+            测点扩展信息
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.Monitor_Projects">
+            <summary>
+            结构物/项目
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.Id">
+            <summary>
+            结构物ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.ProjectName">
+            <summary>
+            结构名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.ProjectTypeName">
+            <summary>
+            结构类型名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.ProjectDesc">
+            <summary>
+            结构物描述
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.ProjectCover">
+            <summary>
+            项目封面图片
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.Longitude">
+            <summary>
+            项目所在的位置经度
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.Latitude">
+            <summary>
+            项目所在的位置纬度
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.Location">
+            <summary>
+            位置全称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.Province">
+            <summary>
+            位置省份
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.City">
+            <summary>
+            位置城市
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.Area">
+            <summary>
+            位置区域
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.CADVerticalView">
+            <summary>
+            CAD俯视图
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.CADFrontView">
+            <summary>
+            CAD正面图
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.IsActived">
+            <summary>
+            是否启用 1 启用 0 不启用
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.ProjectType">
+            <summary>
+            结构物类型
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.DeviceNumber">
+            <summary>
+            测站个数
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.AbnormalDeviceNumber">
+            <summary>
+            异常测站个数
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.PointsNumber">
+            <summary>
+            测点个数
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.CreateUserId">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Projects.DeviceAppSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Monitor.Monitor_ProjectType">
+            <summary>
+            结构物类型
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_ProjectType.Id">
+            <summary>
+            结构物类型ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_ProjectType.TypeName">
+            <summary>
+            类型名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_ProjectType.TypeDesc">
+            <summary>
+            类型描述
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.TaskMode">
+            <summary>
+            任务模式 Clocked 周期触发   Timing 定期触发
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.ClockedInterval">
+            <summary>
+            定期触发的周期 单位 毫秒
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.TimingMode">
+            <summary>
+            定期触发方式 Hour 每小时  Day 每天 Week 每周 Month 每月
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.TimingTime">
+            <summary>
+            定期触发时间
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.GrpcSrvUrl">
+            <summary>
+            跨语言执行的GRPC SERVER URL地址
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.TaskPluginMethod">
+            <summary>
+            任务插件的方法  Native 原始代码  Hybird 混合代码执行
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.TaskPluginFilePath">
+            <summary>
+            插件执行文件
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.ExecuteMethod">
+            <summary>
+            执行方法  Native 原始代码  Hybird 混合代码执行
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.ExecuteLanguage">
+            <summary>
+            asp.net javscript python
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.ExecuteFilePath">
+            <summary>
+            执行文件路径
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.IsActived">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.TaskDesc">
+            <summary>
+            任务说明
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.ExecStauts">
+            <summary>
+            执行状态 1 成功 0 异常
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.LastExecTime">
+            <summary>
+            上次执行时间(可空时间类型)
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.ExecuteParams">
+            <summary>
+            执行参数 以key:value;的形式存入
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Schedulertasks.ExecutePoint">
+            <summary>
+            测点ID集合，以,隔开
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Streamtasks.TaskName">
+            <summary>
+            规则名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Streamtasks.TaskDesc">
+            <summary>
+            规则说明
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Streamtasks.ExecuteMethod">
+            <summary>
+            执行方法  Native 原始代码  Hybird 混合代码执行
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Streamtasks.ExecuteLanguage">
+            <summary>
+            asp.net javscript python
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Streamtasks.ExecuteFilePath">
+            <summary>
+            执行文件路径
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Streamtasks.ExecuteParams">
+            <summary>
+            执行参数；以KEY=VALUE的形式表示
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Streamtasks.IsActived">
+            <summary>
+            是否启用 1 启用 0不启用
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Tags.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Tags.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Monitor.Monitor_Tags.TagDesc">
+            <summary>
+            标签说明
+            </summary>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Web.PageRequest">
+            <summary>
+            列表获取参数(基类)
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Web.PageRequest.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Web.PageRequest.CurrentPage">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Web.PageRequest.Kw">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Web.PageResponse.TotalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Edge.WebApi.Entity.Web.PageResponse.SetData(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="totalCount"></param>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorCategory.ID">
+            <summary>
+            ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorCategory.CategoryCode">
+            <summary>
+            CategoryCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Yun.BsriMonitorPoint">
+            <summary>
+            云平台测点
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.Id">
+            <summary>
+            标识
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.StructureId">
+            <summary>
+            桥梁ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.StationId">
+            <summary>
+            采集/网关标识
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.IsBase">
+            <summary>
+            是否基准点 0 否 1是
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.InitValue">
+            <summary>
+            初始值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.ReviseValue">
+            <summary>
+            修正值（默认0）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.GroupId">
+            <summary>
+            分组ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.IsRelativeValue">
+            <summary>
+            IsRelativeValue
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.PointCode">
+            <summary>
+            PointCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.PointName">
+            <summary>
+            名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.CrossId">
+            <summary>
+            截面ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.CategoryId">
+            <summary>
+            监测类型ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.Unit">
+            <summary>
+            单位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.CrossX">
+            <summary>
+            截面X坐标
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.CrossY">
+            <summary>
+            截面Y坐标
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.RawConString">
+            <summary>
+            原始数据库存储连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.ProConString">
+            <summary>
+            处理数据库存储连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.RealConString">
+            <summary>
+            实时数据库存储连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.AnaConString">
+            <summary>
+            分析数据库存储连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.OriConString">
+            <summary>
+            分析数据库存储连接字符串
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.TableName">
+            <summary>
+            数据表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.ChannelId">
+            <summary>
+            通道ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.ColValue">
+            <summary>
+            数据表字段col值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.IsReasonableValidate">
+            <summary>
+            是否进行合理性验证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.MaxValue">
+            <summary>
+            量程上限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.MinValue">
+            <summary>
+            量程下限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.IsThresholdAlarm">
+            <summary>
+            是否进行阈值报警
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.IsActived">
+            <summary>
+            0否 1是
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.Interval">
+            <summary>
+            报警间隔
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.CreateUserId">
+            <summary>
+            创建人
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.CreateUserName">
+            <summary>
+            CreateUserName
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.ModifyDate">
+            <summary>
+            修改时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.ModifyUserId">
+            <summary>
+            修改人
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.ModifyUserName">
+            <summary>
+            ModifyUserName
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.SensorCategoryId">
+            <summary>
+            传感器ID
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.PercentX">
+            <summary>
+            截面X坐标
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.PercentY">
+            <summary>
+            截面Y坐标
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.MonitorProjectListId">
+            <summary>
+            监测类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.SensorId">
+            <summary>
+            传感器设备
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.NormalValue">
+            <summary>
+            初始值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.AmendValue">
+            <summary>
+            修正值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.Range1Min">
+            <summary>
+            一级阈值下限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.Range1Max">
+            <summary>
+            一级阈值上限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.Range2Min">
+            <summary>
+            二级阈值下限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPoint.Range2Max">
+            <summary>
+            二级阈值上限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPointView.StructureName">
+            <summary>
+            桥梁名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPointView.StationName">
+            <summary>
+            采集/网关名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPointView.ParaName">
+            <summary>
+            参数名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPointView.ParaValue">
+            <summary>
+            参数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorPointView.CategoryCode">
+            <summary>
+            CategoryCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Yun.BsriMonitorStation">
+            <summary>
+            云平台测站
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.ID">
+            <summary>
+            标识
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.StructureId">
+            <summary>
+            结构物ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.StationName">
+            <summary>
+            采集/网关名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.TelNo">
+            <summary>
+            电话号码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.SolveType">
+            <summary>
+            解算方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.Interval">
+            <summary>
+            采样间隔时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.Rate">
+            <summary>
+            采样频率
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.TakeMode">
+            <summary>
+            采样方式(0-连续采集；1-定时采集)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.TakeTimes">
+            <summary>
+            采集时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.ModuleID">
+            <summary>
+            模块号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.Command">
+            <summary>
+            指令
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.TableName">
+            <summary>
+            存储表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.GoodFieldNum">
+            <summary>
+            已安装传感器数目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.Status">
+            <summary>
+            测站状态：0 未启动 （配置测站时） 1 已启动（守护进程启动采集程序，启动失败恢复0） 2 上线 3 未上线 4已发送未获取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.Pic">
+            <summary>
+            照片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.CreateUserId">
+            <summary>
+            创建人
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.CreateUserName">
+            <summary>
+            CreateUserName
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.ModifyDate">
+            <summary>
+            修改时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.ModifyUserId">
+            <summary>
+            修改人
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.ModifyUserName">
+            <summary>
+            ModifyUserName
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.RemoteAddress">
+            <summary>
+            远程采集端的IP
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.RemotePort">
+            <summary>
+            远程采集端端口
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.ActivedAlarm">
+            <summary>
+            上下线报警 0否 1 是
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.DTUStyle">
+            <summary>
+            上下线报警 0否 1 是
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.IsActived">
+            <summary>
+            是否启用 0否 1 是
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.DeviceStyle">
+            <summary>
+            数据类型 1静态数据 2动态数据
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.DeviceAddress">
+            <summary>
+            设备的IP
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.DevicePort">
+            <summary>
+            设备端口
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.WebSocketAddress">
+            <summary>
+            事实数据采集地址
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.WebSocketPort">
+            <summary>
+            事实数据采集端口
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.DeviceId">
+            <summary>
+            采集传输设备
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.SortCode">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.RawConString">
+            <summary>
+            原始数据库存储连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.ProConString">
+            <summary>
+            处理数据库存储连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.RealConString">
+            <summary>
+            实时数据库存储连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStation.AnaConString">
+            <summary>
+            分析数据库存储连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriMonitorStationView.StructureName">
+            <summary>
+            桥梁名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Yun.BsriSolveParam">
+            <summary>
+            云测点参数
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriSolveParam.ID">
+            <summary>
+            ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriSolveParam.PointId">
+            <summary>
+            测点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriSolveParam.SolveType">
+            <summary>
+            监测类型ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriSolveParam.ParaName">
+            <summary>
+            参数名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriSolveParam.ParaValue">
+            <summary>
+            参数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriSolveParam.CreateUserId">
+            <summary>
+            CreateUserId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriSolveParam.CreateDate">
+            <summary>
+            CreateDate
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriSolveParam.ModifyUserId">
+            <summary>
+            ModifyUserId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriSolveParam.ModifyDate">
+            <summary>
+            ModifyDate
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Edge.WebApi.Entity.Yun.BsriStructure">
+            <summary>
+            云平台结构物
+            </summary>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.No">
+            <summary>
+            标识
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.StructureName">
+            <summary>
+            桥梁名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.ShortName">
+            <summary>
+            桥梁简称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.Btype">
+            <summary>
+            桥梁类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.Province">
+            <summary>
+            所在省级
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.City">
+            <summary>
+            所在地市级
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.County">
+            <summary>
+            所在区县级
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.Place">
+            <summary>
+            地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.Xcool">
+            <summary>
+            经度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Edge.WebApi.Entity.Yun.BsriStructure.Ycool">
+            <summary>
+            纬度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Edge.WebApi.Configs.Common.TaosModel">
+            <summary>
+            0 restapi 1tcp
+            </summary>
+        </member>
+        <member name="T:Sugar.Enties.attendance_mission">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.KeyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.MissionName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.PathId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.BeginDate">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.EndDate">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.BhmAlarmId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.CreateUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.Remark">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_mission.QualifiedRate">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.attendance_missionpath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpath.KeyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpath.PathName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpath.PointCount">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpath.PathLength">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpath.SafeDistance">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpath.CreateTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.attendance_missionpathpoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpathpoint.KeyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpathpoint.PathId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpathpoint.XLongitude">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpathpoint.YLatitude">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpathpoint.BridgeId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.attendance_missionpoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpoint.KeyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpoint.MissionId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpoint.PathId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpoint.XLongitude">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpoint.YLatitude">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpoint.BridgeId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionpoint.IsComplete">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.attendance_missionreceive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionreceive.KeyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionreceive.MissionId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_missionreceive.UserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.attendance_record">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.KeyId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.AttendanceRecordId">
+            <summary>
+            Desc:出勤记录标识（用户名@时间）
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.UserId">
+            <summary>
+            Desc:用户ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.Cars">
+            <summary>
+            Desc:出勤车辆牌照
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.StartTime">
+            <summary>
+            Desc:开始时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.EndTime">
+            <summary>
+            Desc:结束时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.Remark">
+            <summary>
+            Desc:评论
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.MissionId">
+            <summary>
+            Desc:出勤任务ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.QualifiedRate">
+            <summary>
+            Desc:任务合格率
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.Speed">
+            <summary>
+            Desc:平均速度
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.Distance">
+            <summary>
+            Desc:距离
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.attendance_record.TotalTime">
+            <summary>
+            Desc:出勤时间（分钟）
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_buttons">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.ButtonText">
+            <summary>
+            Desc:按钮文字
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.SortNum">
+            <summary>
+            Desc:序号
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.IconCls">
+            <summary>
+            Desc:图标简称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.IconUrl">
+            <summary>
+            Desc:图标路径
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.ButtonTag">
+            <summary>
+            Desc:按钮提示
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.Remark">
+            <summary>
+            Desc:按钮描述
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.ButtonHtml">
+            <summary>
+            Desc:按钮页面样式
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_buttons.ModifyUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_departments">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.DepartmentName">
+            <summary>
+            Desc:部门名称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.ParentId">
+            <summary>
+            Desc:父ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.Sortnum">
+            <summary>
+            Desc:排序
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.Remark">
+            <summary>
+            Desc:部门描述
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.Chargeleader">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.WfId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.Leader">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.HasDailyRecord">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_departments.ModifyUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_diccategorys">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_diccategorys.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_diccategorys.Title">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_diccategorys.Code">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_diccategorys.SortNum">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_diccategorys.Remark">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_diccategorys.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_diccategorys.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_diccategorys.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_diccategorys.ModifyUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_dics">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.Title">
+            <summary>
+            Desc:名称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.Code">
+            <summary>
+            Desc:字典编码
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.SortNum">
+            <summary>
+            Desc:序号
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.ParentId">
+            <summary>
+            Desc:父节点
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.CategoryId">
+            <summary>
+            Desc:字典类型
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.Reamrk">
+            <summary>
+            Desc:字典描述
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.Status">
+            <summary>
+            Desc:状态1 启用 0停用
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_dics.ModifyUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_logs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.OperationType">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.UserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.OperationTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.TableName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.BusinessName">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.PrimaryKey">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.SqlText">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.OperationIp">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_logs.ActionUrl">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_menubutton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_menubutton.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menubutton.MenuId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menubutton.ButtonId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menubutton.SortNum">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menubutton.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menubutton.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menubutton.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menubutton.ModifyUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_menus">
+            <summary>
+            系统菜单表
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.NavTitle">
+            <summary>
+            Desc:菜单标题
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.LinkUrl">
+            <summary>
+            Desc:路径
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.IconUrl">
+            <summary>
+            Desc:图标URL
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.IsVisible">
+            <summary>
+            Desc:是否显示，默认是
+            Default:1
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.ParentId">
+            <summary>
+            Desc:父节点ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.Component">
+            <summary>
+            Desc:vue组件
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.Level">
+            <summary>
+            Desc:层级
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.Sort">
+            <summary>
+            Desc:排序
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.Name">
+            <summary>
+            Desc:菜单name
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.BigImageUrl">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.ModifyUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.Redirect">
+            <summary>
+            Desc:重定向
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.NoKeepAlive">
+            <summary>
+            Desc:不缓存？默认否
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.Badge">
+            <summary>
+            Desc:标记
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_menus.IsAffix">
+            <summary>
+            Desc:是否固定
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_permissions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.MenuId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.Name">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.ActionCode">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.Icon">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.Description">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.ModifyUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_permissions.Type">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_rolemenubtn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_rolemenubtn.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_rolemenubtn.RoleId">
+            <summary>
+            Desc:角色ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_rolemenubtn.BtnId">
+            <summary>
+            Desc:按钮ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_rolemenubtn.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_rolemenubtn.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_rolepermissionmapping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_rolepermissionmapping.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_rolepermissionmapping.RoleId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_rolepermissionmapping.PermissionId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_rolepermissionmapping.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_rolepermissionmapping.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_roles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_roles.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_roles.RoleName">
+            <summary>
+            Desc:角色名
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_roles.SortNum">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_roles.Remark">
+            <summary>
+            Desc:是否默认
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_roles.IsDefault">
+            <summary>
+            Desc:1
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_roles.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_roles.CreatedUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_roles.ModifyTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_roles.ModifyUserId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sugar.Enties.sys_users">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="P:Sugar.Enties.sys_users.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.UserName">
+            <summary>
+            Desc:用户名
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.Password">
+            <summary>
+            Desc:密码
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.PassSalt">
+            <summary>
+            Desc:加密码
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.Email">
+            <summary>
+            Desc:邮箱
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.IsAdmin">
+            <summary>
+            Desc:是否为超级管理员
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.IsDisabled">
+            <summary>
+            Desc:是否禁用
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.TrueName">
+            <summary>
+            Desc:真名
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.DepartmentId">
+            <summary>
+            Desc:部门ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.Mobile">
+            <summary>
+            Desc:手机
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.QQ">
+            <summary>
+            Desc:QQ号
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.Remark">
+            <summary>
+            Desc:描述
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.MenusJson">
+            <summary>
+            Desc:菜单配置
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.ConfigJson">
+            <summary>
+            Desc:配置信息
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.MAC">
+            <summary>
+            Desc:MAC地址
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.IMEI">
+            <summary>
+            Desc:IMEI手机号
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.Token">
+            <summary>
+            Desc:秘钥Token
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.IsLeader">
+            <summary>
+            Desc:是否负责人
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.IsAuthorize">
+            <summary>
+            Desc:监测APP是否授权,0表示未授权,1表示已授权
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.AuthorizeTime">
+            <summary>
+            Desc:监测APP授权时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.AccessBridge">
+            <summary>
+            Desc:该用户可访问的健康监测系统,桥梁Id以逗号隔开
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.NowBridge">
+            <summary>
+            Desc:该用户健康监测系统默认桥梁,对应Base_Bridge中的KeyId
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.CreatedTime">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.WxOpenId">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sugar.Enties.sys_users.RoleId">
+            <summary>
+            Desc:所属角色ID
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+    </members>
+</doc>
